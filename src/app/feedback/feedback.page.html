@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar style="--background: rgb(32, 53, 172)">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home" style="color: white"></ion-back-button>
+        </ion-buttons>
+        <ion-title style="color: white">Feedback</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="floating">Full Name:</ion-label>
+        <ion-input [(ngModel)]="fname"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Email:</ion-label>
+        <ion-input [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked" style="font-size: larger">Feedback</ion-label>
+        <ion-textarea placeholder="Description" [(ngModel)]="feedback"></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="block" shape="round" style="--background: rgb(32, 53, 172)" (click)="submit()">Submit</ion-button>
+</ion-content>

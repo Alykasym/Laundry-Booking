@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar style="--background: rgb(32, 53, 172)">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/profile" style="color: white"></ion-back-button>
+        </ion-buttons>
+        <ion-title style="color: white">Edit Profile</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-card>
+        <form>
+            <ion-list>
+                <ion-item>
+                    <ion-label position="stacked"> Full Name </ion-label>
+                    <ion-input required type="text" [(ngModel)]="name" name="name"></ion-input>
+                </ion-item>
+                <div><br /></div>
+
+                <ion-item>
+                    <ion-label position="stacked"> Phone </ion-label>
+                    <ion-input required type="text" [(ngModel)]="phone" name="phone"></ion-input>
+                </ion-item>
+                <div><br /></div>
+                <ion-button type="submit" expand="block" shape="round" (click)="updateProfile()">Save Changes</ion-button>
+            </ion-list>
+        </form>
+    </ion-card>
+</ion-content>

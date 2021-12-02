@@ -1,0 +1,42 @@
+.container {
+    transform: translate(0%, 20%);
+}
+
+ion-content .header {
+    transform: translate(10%, 0);
+}
+
+.header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: -15px;
+}
+
+ion-label {
+    font-weight: bold;
+}
+
+ion-card {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    width: 84%;
+    left: 5%;
+}
+
+ion-item {
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #eeeeee00;
+    --ion-background-color: #eeeeee;
+}
+
+ion-button {
+    --border-radius: 15px;
+    --background: rgb(255, 0, 0);
+    font-weight: bolder;
+    height: 40px;
+}
+
+.container a:link {
+    text-decoration: none;
+}

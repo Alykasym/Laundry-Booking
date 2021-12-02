@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar style="--background: rgb(32, 53, 172)">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home" style="color: white"></ion-back-button>
+        </ion-buttons>
+        <ion-title style="color: white">My Reservations</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content (click)="fetchBookings()">
+    <ion-grid>
+        <row *ngFor="let data of storedData">
+            <ion-col *ngFor="let value of data.bookingDate">
+                <ion-row>Date: {{value.Date}}</ion-row>
+                <ion-row>Time: {{value.Time}}</ion-row>
+                <ion-row>Code: {{value.Code}}</ion-row>
+                <ion-row>Booked at: {{value.BookedAt.toDate() | date:'medium'}}</ion-row>
+                <ion-row>________________________________________</ion-row>
+            </ion-col>
+        </row>
+    </ion-grid>
+</ion-content>

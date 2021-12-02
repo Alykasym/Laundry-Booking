@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "laundy_booking",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

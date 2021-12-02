@@ -1,0 +1,81 @@
+<ion-menu side="start" menuId="menu-content" contentId="menu-content" type="overlay">
+    <ion-header>
+        <ion-toolbar style="
+        --background: rgb(255, 255, 255);
+        --background: linear-gradient(
+          149deg,
+          rgba(255, 255, 255, 0.5209793390012255) 54%,
+          rgba(254, 209, 0, 1) 100%
+        );
+      ">
+            <ion-title style="color: rgb(0, 0, 0)">Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <ion-item (click)="gotoProfile()">
+                <ion-icon slot="end" name="person-circle-outline"></ion-icon>
+                <ion-label>Profile</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="[ '/my-reservations']">
+                <ion-icon slot="end" name="receipt-outline"></ion-icon>
+                <ion-label>My Reservations</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="[ '/feedback']">
+                <ion-icon slot="end" name="chatbox-ellipses-outline"></ion-icon>
+                <ion-label>Feedback</ion-label>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer>
+        <ion-button expand="block" (click)="logout()" style="
+        --background: rgb(255, 255, 255);
+        --background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.5209793390012255) 0%,
+          rgba(11, 35, 167, 1) 0%
+        );
+      ">Logout</ion-button>
+    </ion-footer>
+</ion-menu>
+<ion-router-outlet id="menu-content"></ion-router-outlet>
+<div><br /></div>
+<ion-item ion-list lines="none">
+    <ion-toolbar color="transparent">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-avatar style="width: 15%; height: 55%; transform: translate(-50%, -10%)" (click)="gotoProfile()">
+        <img src="https://cdn.onlinewebfonts.com/svg/img_206976.png" /> Profile
+    </ion-avatar>
+</ion-item>
+<div><br /></div>
+<div class="header-container">
+    <ion-text class="header">Hello, {{user?.userName}}!</ion-text>
+    <br />
+    <ion-text class="sub-header">Let's reserve machine for you!</ion-text>
+</div>
+<div><br /></div>
+<div><br /></div>
+<div class="img-button" [routerLink]="[ '/reservation']">
+    <div class="textx">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F114%2F114730.png&f=1&nofb=1" alt="alternatetext" />
+    </div>
+    <div class="textx"><span>RESERVATION</span></div>
+</div>
+<div><br /></div>
+
+<div class="img-button" [routerLink]="[ '/my-reservations']">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F114%2F114903.png&f=1&nofb=1" />
+    <div class="textx"><span>MY RESERVATION</span></div>
+</div>
+<div><br /></div>
+
+<div class="img-button" [routerLink]="[ '/feedback']">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_545228.png&f=1&nofb=1" />
+    <div class="textx"><span>FEEDBACK</span></div>
+</div>
+
+<div><br /></div>
+<div><br /></div>

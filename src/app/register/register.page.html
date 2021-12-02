@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/login"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <div class="container">
+        <div class="header">
+            <h1>Let's Get Started!</h1>
+            <h5>Create an account to get all features</h5>
+        </div>
+        <ion-card>
+            <form>
+                <ion-list>
+                    <ion-item>
+                        <ion-label position="floating"> Full Name </ion-label>
+                        <ion-input required type="text" [(ngModel)]="name" name="name"></ion-input>
+                    </ion-item>
+                    <div><br /></div>
+                    <ion-item>
+                        <ion-label position="floating"> Email </ion-label>
+                        <ion-input required type="text" [(ngModel)]="email" name="email"></ion-input>
+                    </ion-item>
+                    <div><br /></div>
+                    <ion-item>
+                        <ion-label position="floating"> Phone </ion-label>
+                        <ion-input required type="text" [(ngModel)]="phone" name="phone"></ion-input>
+                    </ion-item>
+                    <div><br /></div>
+                    <ion-item>
+                        <ion-label position="floating"> Password </ion-label>
+                        <ion-input required type="password" [(ngModel)]="password" name="password"></ion-input>
+                    </ion-item>
+                    <div><br /></div>
+                    <div><br /></div>
+                    <ion-button type="submit" expand="block" shape="round" (click)="register()">Register</ion-button>
+                </ion-list>
+            </form>
+        </ion-card>
+    </div>
+</ion-content>

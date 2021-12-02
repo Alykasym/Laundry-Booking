@@ -1,0 +1,10 @@
+{
+  "name": "laundy_booking",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}

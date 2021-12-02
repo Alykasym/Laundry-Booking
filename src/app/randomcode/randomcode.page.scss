@@ -1,0 +1,23 @@
+ion-item {
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #eeeeee00;
+    --ion-background-color: #eeeeee;
+    text-align: center;
+}
+
+ion-button {
+    --border-radius: 15px;
+    --background: rgb(255, 0, 0);
+    font-weight: bolder;
+    height: 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin: 10px;
+}

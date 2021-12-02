@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar style="--background: rgb(32, 53, 172)">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home" style="color: white"></ion-back-button>
+        </ion-buttons>
+        <ion-title style="color: white">Reservation</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <div><br /></div>
+    <div><br /></div>
+    <ion-item>
+        <ion-label>Select a date: </ion-label>
+        <ion-datetime color="primary" displayFormat="DDDD MM YYYY" min="{{currentDate | date:'yyyy-MM-dd'}}" max="{{endDate | date:'yyyy-MM-dd'}}" [(ngModel)]="bookingDate"></ion-datetime>
+    </ion-item>
+    <div><br /></div>
+
+    <ion-item (click)="openPicker()">
+        <ion-label>Select Time: </ion-label>
+        <ion-label style="color: black" slot="end">{{timeslot}}</ion-label>
+    </ion-item>
+    <div><br /></div>
+    <ion-button expand="block" (click)="reservation()">CONTINUE</ion-button>
+</ion-content>
